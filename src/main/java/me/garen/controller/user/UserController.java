@@ -1,4 +1,4 @@
-package me.garen.controller;
+package me.garen.controller.user;
 
 import me.garen.models.User;
 import me.garen.services.UserServices;
@@ -22,14 +22,14 @@ public class UserController {
 
     @RequestMapping(value = "/user" ,method = RequestMethod.POST)
     @ResponseBody
-    public String user(@RequestBody User user) {
-
-        System.out.println(user.getEmail());
-
-        userServices.crateUser(user);
+    public long user(@RequestBody User user) {
 
 
-        return "Hello World!";
+
+        long userId = userServices.crateUser(user);
+
+
+        return userId;
 
     }
 }

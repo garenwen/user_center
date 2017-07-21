@@ -21,13 +21,13 @@ public class User {
 
     @Column(name = "user_name")
     private String userName;
-
+    @Column(name = "email")
     private String email;
-
+    @Column(name = "phone")
     private String phone;
-
+    @Column(name = "password")
     private String password;
-
+    @Column(name = "state")
     private String state;
 
     public void setEmail(String email) {
